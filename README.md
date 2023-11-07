@@ -36,7 +36,7 @@ python bot.py
 - [Kids Coder](https://t.me/kids_coder)
 - [Karan Coder](https://t.me/karancoder)
 
-## Hosting on a VPS (Lifetime)
+## Hosting on a VPS (24/7)
 
 ### Prerequisites
 
