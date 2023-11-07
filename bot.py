@@ -5,8 +5,8 @@ import time
 from telebot.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from functions import insertUser, track_exists, addBalance, cutBalance, getData, addRefCount, isExists, setWelcomeStaus, setReferredStatus
 
-bot_token = "6524462644:AAGgAy5HKHtqJbLvblo-ckg9McPb-V7RcIs"
-SmmPanelApi = "88993e02ea9f30ff54d1c72111080d61"
+bot_token = "HereBotToken" #bot token from @BotFather
+SmmPanelApi = "smm api key" # api key from eadysmmpanel.com you can change api link
 bot = telebot.TeleBot(bot_token)
 admin_user_id = 5337150824
 welcome_bonus = 100
@@ -61,7 +61,7 @@ def send_welcome(message):
     insertUser(user_id, initial_data)
 
   if not is_member_of_channel(user_id):
-    markup = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+    markup = ReplyKeyboardMarkup(resize_keyboard=True)
     button1 = KeyboardButton("/start")
 
     markup.add(button1)
@@ -90,7 +90,7 @@ def send_welcome(message):
     addBalance(refby, ref_bonus)
     setReferredStatus(user_id)
 
-  markup = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+  markup = ReplyKeyboardMarkup(resize_keyboard=True)
   button1 = KeyboardButton("👁‍🗨 Order View")
   button2 = KeyboardButton("👤 My Account")
   button3 = KeyboardButton("💳 Pricing")
@@ -215,7 +215,7 @@ Other methods: 0%
     data = getData(user_id)
     balance = data['balance']
 
-    markup = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+    markup = ReplyKeyboardMarkup(resize_keyboard=True)
     button1 = KeyboardButton("✘ Cancel")
     markup.add(button1)
 
@@ -227,7 +227,7 @@ Other methods: 0%
     bot.register_next_step_handler(message, view_amount)
 
 
-markup = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+markup = ReplyKeyboardMarkup(resize_keyboard=True)
 button1 = KeyboardButton("👁‍🗨 Order View")
 button2 = KeyboardButton("👤 My Account")
 button3 = KeyboardButton("💳 Pricing")
@@ -366,8 +366,9 @@ def view_link(message, amount):
 if __name__ == '__main__':
   while True:
     try:
-      bot.polling(none_stop=True)
       print("bot is running")
+      bot.polling(none_stop=True)
+      
     except Exception as e:
       print(f"Bot polling failed: {e}")
       # Optionally send a message to the admin about the exception.
