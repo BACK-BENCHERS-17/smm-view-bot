@@ -5,16 +5,16 @@ import time
 from telebot.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from functions import insertUser, track_exists, addBalance, cutBalance, getData, addRefCount, isExists, setWelcomeStaus, setReferredStatus
 
-bot_token = "HereBotToken" #bot token from @BotFather
+bot_token = "8034782516:AAHwXW-SS_TjnAbfltrHvT0LNyMFAf_SZ_M" #bot token from @BotFather
 SmmPanelApi = "smm api key" # api key from eadysmmpanel.com you can change api link
 bot = telebot.TeleBot(bot_token)
-admin_user_id = 5337150824
+admin_user_id = 6178010957
 welcome_bonus = 100
 ref_bonus = 500
 min_view = 100
 max_view = 30000
-required_channels = ['@pythonViewbooster']  # more channel same as
-payment_channel = "@pythonViewbooster"
+required_channels = ['@POINTS_DEPOSIT']  # more channel same as
+payment_channel = "@POINTS_DEPOSIT"
 
 
 # Function to check if the user is a member of all required channels
@@ -374,3 +374,4 @@ if __name__ == '__main__':
       # Optionally send a message to the admin about the exception.
       bot.send_message(admin_user_id, f"Bot polling failed: {e}")
       time.sleep(10)  # Wait a bit before restarting the bot polling
+
