@@ -68,7 +68,7 @@ def send_welcome(message):
 
     bot.send_message(
         user_id,
-        "You need to join the following channels before continuing:\n- @pythonViewbooster",
+        "You need to join the following channels before continuing:\n- @POINTS_DEPOSIT",
         parse_mode='HTML',
         reply_markup=markup  # Pass the markup to the reply
     )
@@ -281,7 +281,7 @@ def is_valid_link(link):
 def send_order_to_smm_panel(link, amount):
   """ Send the order to the SMM panel and return the result """
   try:
-    response = requests.post(url="https://easysmmpanel.com/api/v2",
+    response = requests.post(url="https://justanotherpanel.com/api/v2",
                              data={
                                  'key': SmmPanelApi,
                                  'action': 'add',
@@ -374,6 +374,7 @@ if __name__ == '__main__':
       # Optionally send a message to the admin about the exception.
       bot.send_message(admin_user_id, f"Bot polling failed: {e}")
       time.sleep(10)  # Wait a bit before restarting the bot polling
+
 
 
 
