@@ -5,16 +5,16 @@ import time
 from telebot.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from functions import insertUser, track_exists, addBalance, cutBalance, getData, addRefCount, isExists, setWelcomeStaus, setReferredStatus
 
-bot_token = "HereBotToken" #bot token from @BotFather
+bot_token = "8034782516:AAHwXW-SS_TjnAbfltrHvT0LNyMFAf_SZ_M" #bot token from @BotFather
 SmmPanelApi = "smm api key" # api key from eadysmmpanel.com you can change api link
 bot = telebot.TeleBot(bot_token)
-admin_user_id = 5337150824
+admin_user_id = 6178010957
 welcome_bonus = 100
 ref_bonus = 500
 min_view = 100
 max_view = 30000
-required_channels = ['@pythonViewbooster']  # more channel same as
-payment_channel = "@pythonViewbooster"
+required_channels = ['@POINTS_DEPOSIT']  # more channel same as
+payment_channel = "@POINTS_DEPOSIT"
 
 
 # Function to check if the user is a member of all required channels
@@ -164,7 +164,7 @@ Estimating views speed is difficult because the speed can vary depending on the 
 <b><u>•Is it possible to transfer balance to other users?</u></b>
 Yes, if your balance is more than 10k and you want to transfer all of them, you can send a request to support.
 
-🆘 In case you have any problem, contact @KsCoder"""
+🆘 In case you have any problem, contact @BACK_BENCHERS17"""
 
     bot.reply_to(message, msg, parse_mode="html")
 
@@ -181,9 +181,9 @@ Yes, if your balance is more than 10k and you want to transfer all of them, you 
 ➎ 📦 1700K views for 50$ (0.03$ per K)
 ➏ 📦 5000K views for 100$ (0.02$ per K) </b>
 
-💰 Pay with Bitcoin, USDT, BSC, BUSD,  ... 👉🏻 @KsCoder
+💰 Pay with Bitcoin, USDT, BSC, BUSD,  ... 👉🏻 @BACK_BENCHERS17
 
-💳️ Pay with Paypal, Paytm, WebMoney, Perfect Money, Payeer ... 👉🏻 @KsCoder
+💳️ Pay with Paypal, Paytm, WebMoney, Perfect Money, Payeer ... 👉🏻 @BACK_BENCHERS17
 
 <b><u>🎁 Bonus:</u></b>
 Cryptocurrency: 10%
@@ -194,14 +194,14 @@ Other methods: 0%
 """
 
     markup = InlineKeyboardMarkup()
-    button1 = InlineKeyboardButton("💲 PayPal", url="https://t.me/KsCoder")
+    button1 = InlineKeyboardButton("💲 PayPal", url="https://t.me/BACK_BENCHERS17")
     button2 = InlineKeyboardButton("💳 Perfect Money",
-                                   url="https://t.me/KsCoder")
-    button6 = InlineKeyboardButton("💳 Webmoney", url="https://t.me/KsCoder")
+                                   url="https://t.me/BACK_BENCHERS17")
+    button6 = InlineKeyboardButton("💳 Webmoney", url="https://t.me/BACK_BENCHERS17")
     button3 = InlineKeyboardButton("💎 Bitcoin, Litecoin, USDT...",
                                    url="https://t.me/KsCoder")
-    button4 = InlineKeyboardButton("💸 Paytm", url="https://t.me/KsCoder")
-    button5 = InlineKeyboardButton("💰 Paytm", url="https://t.me/KsCoder")
+    button4 = InlineKeyboardButton("💸 Paytm", url="https://t.me/BACK_BENCHERS17")
+    button5 = InlineKeyboardButton("💰 Paytm", url="https://t.me/BACK_BENCHERS17")
 
     markup.add(button1)
     markup.add(button2, button6)
@@ -374,3 +374,4 @@ if __name__ == '__main__':
       # Optionally send a message to the admin about the exception.
       bot.send_message(admin_user_id, f"Bot polling failed: {e}")
       time.sleep(10)  # Wait a bit before restarting the bot polling
+
